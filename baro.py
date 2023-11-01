@@ -30,3 +30,5 @@ measured_pressure = pressure  # Replace with the measured atmospheric pressure i
 
 altitude = calculate_altitude(measured_pressure, sea_level_pressure)
 print(f"Altitude: {altitude} meters")
+
+
