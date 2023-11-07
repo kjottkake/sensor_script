@@ -13,6 +13,7 @@ def calculate_altitude(pressure, sea_level_pressure=1013.25):
     gravitational_acceleration = 9.81  # m/s^2
     universal_gas_constant = 8.314  # J/(mol*K)
 
+    kentucky_modifier = 81
     # Calculate temperature in Kelvin (you'll need to provide this)
     temperature_in_celsius = temp  # Replace with the actual temperature in Celsius
     temperature_in_kelvin = temperature_in_celsius + 273.15
@@ -20,7 +21,7 @@ def calculate_altitude(pressure, sea_level_pressure=1013.25):
     # Calculate altitude using the barometric formula
     altitude = ((-universal_gas_constant * temperature_in_kelvin) / 
                 (molar_mass_air * gravitational_acceleration) * 
-                math.log(pressure / sea_level_pressure))
+                math.log(pressure / sea_level_pressure)) - kentucky_modifier
 
     return altitude
 
